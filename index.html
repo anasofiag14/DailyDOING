@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icon.png">
+    <title>Daily DOING</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/narrow-jumbotron.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="container" id="cont">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt1" href="index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt2" href="account.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active titlefont2 toggleBtn" id="btt3" href="addevent.html">+New Event</a>
+              <!--<input type="text" class="form-control add-todo" placeholder="Add todo">-->
+            </li>
+          </ul>
+        </nav>
+        <a class="text-muted titlefont2">
+            <span id="acc_name">Ana Sofia</span>
+        </a>
+      </header>
+      <main role="main">
+        <div class="jumbotron backgroundblue">
+          <h1 class="display-3 title">
+            Daily DOING
+            <span id="current-date" class="backgroundgreen"></span>
+          </h1>
+          <p><a class="btn btn-lg btn-success titlefont buttonbg toggleBtn" id="bt" href="myday.html" role="button" style= "">TODAY</a></p>
+        </div>
+        <div class="row marketing">
+          <div class="col-lg-6">
+            
+            <p><a class="btn btn-lg btn-success titlefont buttons toggleBtn" id="bt1" href="myday.html" role="button">My day</a></p>
+            <p><a class="btn btn-lg btn-success titlefont buttons toggleBtn" id="bt2" href="myweek.html" role="button">My week</a></p>
+          </div>
+          <div class="col-lg-6">
+            <p><a class="btn btn-lg btn-success titlefont buttons toggleBtn" id="bt3" href="mymonth.html" role="button">My month</a></p>
+            <p><a class="btn btn-lg btn-success titlefont buttons toggleBtn" id="bt4" href="myyear.html" role="button">My year</a></p>
+          </div>
+        </main>
+        </div> <!-- /container -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/Main.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+          <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyA_ymYF5idSWSaZxH69ojxiQvntw9RvLGM",
+              authDomain: "daily-doing.firebaseapp.com",
+              databaseURL: "https://daily-doing.firebaseio.com",
+              projectId: "daily-doing",
+              storageBucket: "daily-doing.appspot.com",
+              messagingSenderId: "130649507144"
+            };
+            firebase.initializeApp(config);
+
+            function writeUser (name, age, career, email, password){
+              firebase.database().ref('users/user').set({
+
+                   name:name,
+                   age:age,
+                   career:career,
+                   email:email,
+                   password:password,
+
+              });
+            }
+            
+            writeUser()
+            $('#cont').html(namesu);
+
+
+               var name = $('#namesu').val().trim();
+              /* var age = $('#agesu').val().trim();
+               var career = $('#careersu').val().trim();
+               var email = $('#emailsu').val().trim();
+               var passu = $('#passu').val().trim();*/
+               
+
+          </script>
+  <script src="js/localstorage.js"></script>
+  <script type="text/javascript">
+    
+
+    $(document).ready(function(){
+      var user = store.get('user');
+      if(!user){
+        window.location = 'login.html';
+      }
+      $('#acc_name').html(user.name);
+    })
+  </script>
+      </body>
+      
+      
+    </html>

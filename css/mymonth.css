@@ -1,0 +1,106 @@
+
+
+body{
+	background-color: #9FF781;
+}	
+
+#calendar {
+    float: right;
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #81DAF5;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
+  
+}
+
+.tabl {
+	text-align: center;
+
+
+}
+
+.bigwords {
+	font-size: 2em;
+}
+
+.titlefont {
+    font-family:'Capriola', sans-serif;
+    font-size: 1em;
+}
+
+.title {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 6em;
+}
+
+.title1 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 4em;
+	color: black;
+	text-align: center;
+}
+
+.titlefont2 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 2em;
+}
+
+.backgroundblue {
+	border-width: 20px;
+	background-color: #81DAF5;
+	border-color: f60;
+	color: black;
+}
+
+
+.backgroundgreen {
+	background-color: #9FF781;
+	border-color: f60;
+	color: black;
+	width: : 60px;
+	height: 50px;
+	padding: 
+}
+
+.buttons {
+
+	background-color: #81DAF5;
+	border-color: black;
+	color: black;
+}
+
+.buttons:hover {
+
+	background-color: #007bff;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg {
+	background-color: #9FF781;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg:hover {
+
+	background-color: #2EFE2E;
+	border-color: black;
+	color: black;
+}
+
+.buttonsup {
+	color: #007bff;
+
+}
+
+.buttonsup:hover {
+	color: #81DAF5;
+
+}
+
+
+

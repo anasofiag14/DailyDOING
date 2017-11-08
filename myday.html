@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <title>Daily DOING</title>
+  <link rel="icon" href="icon.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="css/myday.css">
+ </head>
+<body>
+<div class="container">
+     <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt4" href="index.html">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt5" href="account.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active titlefont2 toggleBtn" id="btt6" href="addevent.html">+New Event</a>
+              <!--<input type="text" class="form-control add-todo" placeholder="Add todo">-->
+            </li>
+          </ul>
+        </nav>
+        <a class="text-muted titlefont2">
+          <span id="acc_name"></span>
+        </a>
+      </header>
+    <div>
+       <h1 class="title">Today</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="todolist not-done backgroundblue">
+                <ul class="list-unstyled backgroundblue">
+                    <li class="li-blue">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" />School</label>
+                        </div>
+                    </li>
+                    <li class="li-blue">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" />Buy bread</label>
+                        </div>
+                    </li>
+                    <li class="li-blue">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" />Go to coderise</label>
+                        </div>
+                    </li>
+                     <button id="btt7" class="btn btn-success titlefont2 buttonbg toggleBtn">Mark all as done</button>
+                </ul>
+                <div class="todo-footer backgroundblue titlefont2">
+                    <strong><span class="count-todos"></span></strong> Items left
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="todolist backgroundblue">
+           <div class="title">
+             <h1>Already done</h1>
+            </div>
+                <ul id="done-items" class="list-unstyled titlefont2">
+                    <li>Some item <button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/Main.js"></script>
+  <script src="js/localstorage.js"></script>
+  <script type="text/javascript">
+    
+
+    $(document).ready(function(){
+      var user = store.get('user');
+      if(!user){
+        window.location = 'login.html';
+      }
+      $('#acc_name').html(user.name);
+    })
+  </script>
+</body>
+
+</html>

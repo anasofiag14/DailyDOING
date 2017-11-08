@@ -1,0 +1,52 @@
+/*=========================================ADD EVENT PAGE==============================================*/
+
+body{
+	background-color: #9FF781;
+}
+
+.bigwords {
+	font-size: 6em;
+}
+
+.titlefont {
+    font-family:'Capriola', sans-serif;
+    font-size: 2em;
+
+}
+
+.titlee {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 4em;
+}
+
+.titlefont2 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 2em;
+}
+
+.backgroundblue {
+	border-width: 20px;
+	background-color: #81DAF5;
+	border-color: f60;
+	color: black;
+}
+
+.addbt {
+	background-color: #007bff;
+	border-color: black;
+	color: black;
+}
+
+.addbt:hover {
+
+	background-color: #2EFE2E;
+	border-color: black;
+	color: black;
+}
+
+
+.box {
+	margin-left: 11px;
+}
+
+

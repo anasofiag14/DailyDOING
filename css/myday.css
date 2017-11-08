@@ -1,0 +1,103 @@
+/*=========================================MY DAY PAGE==============================================*/
+
+body{
+    background-color:#9FF781;
+}
+.title1 {
+    font-family:  'Amaranth', sans-serif;
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+.todolist{
+    background-color:#FFF;
+    padding:20px 20px 10px 20px;
+    margin-top:30px;
+}
+.todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+.form-control{
+    border-radius:0;
+}
+li.ui-state-default{
+    background:#fff;
+    border:none;
+    border-bottom:1px solid #ddd;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+
+
+.todo-footer{
+    background-color:#F4FCE8;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+#done-items li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    text-decoration:line-through;
+}
+#done-items li:last-child{
+    border-bottom:none;
+}
+#checkAll{
+    margin-top:10px;
+}
+
+.bigwords {
+	font-size: 6em;
+}
+
+.titlefont {
+    font-family:'Capriola', sans-serif;
+    font-size: 2em;
+
+}
+
+.title {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 6em;
+   text-align: center;
+}
+
+.titlefont2 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 2em;
+}
+
+.backgroundblue {
+	border-width: 20px;
+	background-color: #81DAF5;
+	border-color: f60;
+	color: black;
+}
+
+
+.li-blue {
+	font-family:'Capriola', sans-serif;
+    font-size: 2em;
+	background: #81DAF5;
+	border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.buttonbg {
+    background-color: #9FF781;
+    border-color: black;
+    color: black;
+}
+
+.buttonbg:hover {
+
+    background-color: #2EFE2E;
+    border-color: black;
+    color: black;
+}

@@ -1,0 +1,137 @@
+
+/*=============================================MY WEEK=============================================*/
+body {
+	background-color: #9FF781;
+
+}
+
+.bigwords {
+	font-size: 2em;
+}
+
+.titlefont {
+    font-family:'Capriola', sans-serif;
+    font-size: 2em;
+}
+
+.title {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 3.3em;
+	color: black;
+}
+
+.title1 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 4em;
+	color: black;
+	text-align: center;
+}
+
+.titlefont2 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 2em;
+}
+
+.backgroundblue {
+	border-width: 20px;
+	background-color: #81DAF5;
+	border-color: f60;
+	color: black;
+}
+
+.backgroundgreen {
+	background-color: #9FF781;
+	border-color: f60;
+	color: black;
+	width: : 60px;
+	height: 50px;
+	padding: 
+}
+
+.buttons {
+
+	background-color: #81DAF5;
+	border-color: black;
+	color: black;
+}
+
+.buttons:hover {
+
+	background-color: #007bff;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg {
+	background-color: #9FF781;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg:hover {
+
+	background-color: #2EFE2E;
+	border-color: black;
+	color: black;
+}
+
+.buttonsup {
+	color: #007bff;
+
+}
+
+.buttonsup:hover {
+	color: #81DAF5;
+
+}
+
+
+.todolist{
+    background-color: #81DAF5;
+    padding:20px 20px 10px 20px;
+    margin-top:30px;
+}
+.todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+.form-control{
+    border-radius:0;
+}
+li.ui-state-default{
+    background:#fff;
+    border:none;
+    border-bottom:1px solid #ddd;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+
+
+.todo-footer{
+    background-color: #81DAF5;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+#done-items li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    text-decoration:line-through;
+}
+#done-items li:last-child{
+    border-bottom:none;
+}
+#checkAll{
+    margin-top:10px;
+}
+
+.li-blue {
+	font-family:'Capriola', sans-serif;
+    font-size: 2em;
+	background: #81DAF5;
+	border: none;
+    border-bottom: 1px solid #ddd;
+}

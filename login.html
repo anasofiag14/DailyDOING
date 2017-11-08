@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="icon" href="icon.png">
+  <title>Daily DOING</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+  <div class="form active">    
+    <div class="row">
+      <ul class="tab-group titlefont2 toggleBtn col-md-6">
+        <li class="tab buttonbg"><a href="#signup">Sign Up</a></li>
+      </ul>
+
+      <ul class="tab-group titlefont2 toggleBtn col-md-6">
+        <li class="tab buttonbg"><a href="#login" id="loginLink">Log In</a></li>
+      </ul>
+    </div> 
+    
+    <div class="tab-content">
+      <div id="signup">   
+        <h1 class="title">Sign Up</h1>
+        
+        <form action="/" method="post">
+          <div class="top-row">
+            <div class="field-wrap titlefont">
+              <label> Name
+                <span class="req">*</span>
+              </label>
+
+              <input type="text" required autocomplete="off"  id="namesu" />
+            </div>
+        
+            <div class="field-wrap titlefont">
+              <label>Age
+                <span class="req">*</span>
+              </label>
+
+              <input type="number"required autocomplete="off" id="agesu"/>
+            </div>
+          </div>
+
+          <div class="field-wrap titlefont">
+            <label>Career
+              <span class="req">*</span>
+            </label>
+
+            <input type="text" required autocomplete="off"  id="careersu" />
+          </div>
+
+          <div class="field-wrap titlefont">
+            <label>Email Address
+              <span class="req">*</span>
+            </label>
+
+            <input type="email"required autocomplete="off"  id="emailsu"/>
+          </div>
+        
+          <div class="field-wrap titlefont">
+            <label>Set A Password
+              <span class="req">*</span>
+            </label>
+
+            <input type="password"required autocomplete="off"  id="passu"/>
+          </div>
+         
+          <button id="buttonsu" class="buttonbg titlefont button-block toggleBtn"> Get Started</button>
+        </form> 
+      </div>
+    </div> 
+    <div class="tab-content">
+      <div class="form" id="login" >     
+        <div class="title"> Welcome Back! </div> 
+          
+          <form method="post">
+          
+            <div class="field-wrap titlefont toggleBtn">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off" id="emailli" />
+          </div>
+          
+          <div class="field-wrap titlefont toggleBtn">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off" id="passli"> 
+          </div>
+          
+          <p class="forgot titlefont2"><a href="#">Forgot Password?</a></p>
+          
+          <button class="buttonbg titlefont button-block toggleBtn"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->    
+</div> 
+    </div>
+  </div>  
+<!-- /form -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="js/localstorage.js"></script>
+      <script type="text/javascript" src="js/login.js"></script>
+      <script type="text/javascript" src="js/Main.js"></script>
+
+        
+          <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+          <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyA_ymYF5idSWSaZxH69ojxiQvntw9RvLGM",
+              authDomain: "daily-doing.firebaseapp.com",
+              databaseURL: "https://daily-doing.firebaseio.com",
+              projectId: "daily-doing",
+              storageBucket: "daily-doing.appspot.com",
+              messagingSenderId: "130649507144"
+            };
+            firebase.initializeApp(config);
+
+            function writeNewUser (name, age, career, email, password, events){
+              var newUser = {
+
+                   name:name,
+                   age:age,
+                   career:career,
+                   email:email,
+                   password:password,
+
+              };
+
+              firebase.database().ref('users/user').push(newUser)
+              .then(function(){
+                //ha creado un nuevo usuario
+                store.set('user', newUser);
+                alert('Welcome!');
+                window.location.href = 'account.html';
+              })
+              .catch(function(error){
+                console.log(error);
+                alert('The new user was not created, try again.');
+              });
+            }
+           
+            $('#buttonsu').click(function(evt){
+               evt.preventDefault();
+
+               var name = $('#namesu').val().trim();
+               var age = $('#agesu').val().trim();
+               var career = $('#careersu').val().trim();
+               var email = $('#emailsu').val().trim();
+               var passu = $('#passu').val().trim();
+
+               writeNewUser(name,age,career,email,passu);
+
+
+
+               
+                
+            })
+
+          
+
+          </script>
+<script type="text/javascript" src="js/login_form.js"></script>
+
+         
+</body>
+</html>

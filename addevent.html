@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="icon" href="icon.png">
+      <title>Daily DOING</title>
+      <link href="css/narrow-jumbotron.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+      <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+      <link rel="stylesheet" href="css/custom.min.css">
+      <link rel="stylesheet" type="text/css" href="css/addevent.css">
+      <script></script>
+   </head>
+   <body>
+<div class="container">
+      <header class="header clearfix">
+         <nav>
+            <ul class="nav nav-pills float-right">
+               <li class="nav-item">
+                  <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt4" href="index.html">Home<span class="sr-only"></span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link titlefont2 buttonsup toggleBtn" id="btt5" href="account.html">Account</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active titlefont2 toggleBtn" id="btt6" href="add event.html">+New Event</a>
+                  <div class="form-group">
+               </li>
+            </ul>
+         </nav>
+         <a class="text-muted titlefont2">
+            <span  id="acc_name"></span>
+         </a>
+      </header>
+  <div class="jumbotron backgroundblue" id="addev">
+      <label class="control-label titlee">New event</label>
+
+      <div class="input-group toggleBtn">
+      <span class="titlefont">name </span>
+      <input type="text" class="form-control box" id="nameevent">
+      </div>
+
+      <div class="form-group  toggleBtn">
+      <span class="titlefont col-xs-3">Notes </span>
+      <textarea class="form-control col-xs-9" rows="3" id="textArea"></textarea>
+      </div>
+
+      <form action="/action_page.php" class="toggleBtn">
+          <label class="titlefont">Date</label>
+          <input type="date" name="bday" id="dateevent">
+          </input>
+      </form>
+  </div>
+   <p><a class="btn btn-lg btn-success titlefont buttonbg addbt toggleBtn" id="bt" href="#" role="button" style= "">Add Event</a></p> 
+</div>
+
+      <script src="/cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script type="text/javascript" src="js/Main.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+      <script>
+         // Initialize Firebase
+         var config = {
+           apiKey: "AIzaSyA_ymYF5idSWSaZxH69ojxiQvntw9RvLGM",
+           authDomain: "daily-doing.firebaseapp.com",
+           databaseURL: "https://daily-doing.firebaseio.com",
+           projectId: "daily-doing",
+           storageBucket: "daily-doing.appspot.com",
+           messagingSenderId: "130649507144"
+         };
+         
+         firebase.initializeApp(config);
+         
+         function writeNewEvent (nameevent, notes, date){
+           firebase.database().ref('events/event').push({
+         
+                nameevent:nameevent,
+                notes:notes,
+                date:date
+            
+           });
+           }
+         
+         $('#bt').click(function(evt){
+            evt.preventDefault();
+            
+         
+          var nameevent = $('#nameevent').val().trim();
+          var notes = $('#textArea').val().trim();
+          var date = $('#dateevent').val().trim();
+         
+          writeNewEvent(nameevent,notes,date);
+         
+         alert('added');
+           
+         })
+         
+        
+      </script>
+   <script src="js/localstorage.js"></script>
+  <script type="text/javascript">
+    
+
+    $(document).ready(function(){
+      var user = store.get('user');
+      if(!user){
+        window.location = 'login.html';
+      }
+      $('#acc_name').html(user.name);
+    })
+  </script>
+   </body>
+</html>

@@ -1,0 +1,82 @@
+
+/*=============================================GENERAL=============================================*/
+body {
+	background-color: #9FF781;
+
+}
+
+.bigwords {
+	font-size: 2em;
+}
+
+.titlefont {
+    font-family:'Capriola', sans-serif;
+    font-size: 2em;
+}
+
+.title {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 6em;
+}
+
+.titlefont2 {
+	font-family:  'Amaranth', sans-serif;
+	font-size: 2em;
+}
+
+.backgroundblue {
+	border-width: 20px;
+	background-color: #81DAF5;
+	border-color: f60;
+	color: black;
+}
+
+
+.backgroundgreen {
+	background-color: #9FF781;
+	border-color: f60;
+	color: black;
+	width: : 60px;
+	height: 50px;
+	padding: 
+}
+
+.buttons {
+
+	background-color: #81DAF5;
+	border-color: black;
+	color: black;
+}
+
+.buttons:hover {
+
+	background-color: #007bff;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg {
+	background-color: #9FF781;
+	border-color: black;
+	color: black;
+}
+
+.buttonbg:hover {
+
+	background-color: #2EFE2E;
+	border-color: black;
+	color: black;
+}
+
+.buttonsup {
+	color: #007bff;
+
+}
+
+.buttonsup:hover {
+	color: #81DAF5;
+
+}
+
+
+
